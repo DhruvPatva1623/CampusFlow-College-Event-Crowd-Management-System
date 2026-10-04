@@ -1,0 +1,204 @@
+/* CampusFlow - style.css
+   colours: white, beige, black
+   fonts: Lora (headings), Inter (text) */
+
+:root {
+  --black: #141414;
+  --white: #ffffff;
+  --beige: #f4efe6;
+  --beige-dark: #e6dccb;
+  --grey: #6a6a6a;
+}
+
+/* ---------- basic ---------- */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+a { color: var(--black); }
+a:hover { color: var(--grey); }
+
+.section { padding: 50px 0; }
+.beige { background: var(--beige); }
+
+/* ---------- buttons ---------- */
+.btn-dark-cf {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 2px;
+  padding: 8px 20px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-dark-cf:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-line-cf {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 2px;
+  padding: 8px 20px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-line-cf:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ---------- navbar ---------- */
+.topbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--beige-dark);
+}
+.topbar .navbar-brand { font-size: 1.4rem; }
+.topbar .nav-link {
+  color: var(--grey);
+  margin-left: 14px;
+}
+.topbar .nav-link:hover,
+.topbar .nav-link.active {
+  color: var(--black);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ---------- home hero ---------- */
+.hero {
+  background: var(--beige);
+  padding: 80px 0;
+  border-bottom: 1px solid var(--beige-dark);
+}
+.hero h1 { font-size: 2.8rem; max-width: 600px; }
+.hero p { max-width: 520px; margin: 15px 0 25px; color: #3a3a3a; }
+
+/* heading on inner pages */
+.page-head {
+  background: var(--beige);
+  padding: 35px 0;
+  border-bottom: 1px solid var(--beige-dark);
+}
+.page-head h1 { margin: 0; font-size: 2rem; }
+.page-head p { margin: 5px 0 0; color: var(--grey); }
+
+/* ---------- cards ---------- */
+.card-box {
+  background: var(--white);
+  border: 1px solid var(--beige-dark);
+  padding: 22px;
+  height: 100%;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card-box:hover {
+  border-color: var(--black);
+  transform: translateY(-3px);
+}
+.card-box h4 { font-size: 1.15rem; margin: 8px 0; }
+.card-box p { margin-bottom: 4px; font-size: 0.93rem; color: #3a3a3a; }
+
+.tag {
+  font-size: 0.78rem;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+/* crowd status label */
+.status {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border: 1px solid var(--black);
+}
+.status-normal   { background: #e3ecdf; }
+.status-moderate { background: #f3e9c6; }
+.status-high     { background: #f2d6b8; }
+.status-full     { background: var(--black); color: var(--white); }
+
+/* progress bar */
+.bar {
+  height: 8px;
+  background: var(--beige-dark);
+  margin: 10px 0;
+}
+.bar-fill {
+  height: 100%;
+  width: 0;
+  background: var(--black);
+  transition: width 0.7s;
+}
+
+/* ---------- forms ---------- */
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--beige-dark);
+  padding: 25px;
+}
+.form-label { font-weight: 600; font-size: 0.92rem; }
+.form-control, .form-select { border-radius: 2px; border-color: #cfc5b2; }
+.form-control:focus, .form-select:focus {
+  border-color: var(--black);
+  box-shadow: none;
+}
+.msg { color: #a02020; min-height: 24px; font-size: 0.9rem; }
+
+/* key/value tables */
+.info-table td {
+  padding: 7px 4px;
+  border-bottom: 1px solid var(--beige-dark);
+}
+.info-table td:first-child { color: var(--grey); width: 38%; }
+
+/* ---------- crowd page ---------- */
+.big-number {
+  font-family: 'Lora', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.tip {
+  background: var(--beige);
+  padding: 8px 12px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+/* ---------- admin ---------- */
+.count-box {
+  background: var(--beige);
+  padding: 18px;
+  text-align: center;
+}
+.count-box .num {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.admin-table th { background: var(--black); color: var(--white); font-weight: 500; }
+.admin-table td { vertical-align: middle; }
+.login-wrap { max-width: 400px; margin: 0 auto; }
+
+/* ---------- footer ---------- */
+.footer {
+  background: var(--beige);
+  border-top: 1px solid var(--beige-dark);
+  padding: 22px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--grey);
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 768px) {
+  .hero { padding: 50px 0; }
+  .hero h1 { font-size: 2rem; }
+  .section { padding: 35px 0; }
+}
